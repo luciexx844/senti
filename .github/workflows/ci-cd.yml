@@ -41,7 +41,7 @@ jobs:
       - name: Train Linear Model
         if: steps.check_changes.outputs.changed == 'true'
         run: |
-          python train_model.py
+          python train.py
 
       - name: Commit and Push Linear Model to Release Branch
         if: steps.check_changes.outputs.changed == 'true'
